@@ -157,7 +157,7 @@ contract TokenERC20 {
     }
 }
 /******************************************/
-/*       Change the name of the contract from Kahawanu to your own    token name
+/* 
 */
 /******************************************/
 contract Metareum is owned, TokenERC20 {
