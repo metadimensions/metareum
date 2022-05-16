@@ -66,6 +66,8 @@ contract TokenERC20 {
         assert(balanceOf[_from] + balanceOf[_to] == previousBalances);
     }
 /**
+
+/**Transferring tokens to the address
      * Transfer tokens
      *
      * Send `_value` tokens to `_to` from your account
