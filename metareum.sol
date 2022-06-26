@@ -194,6 +194,15 @@ mapping (address => bool) public frozenAccount;
         emit Transfer(0, this, mintedAmount);
         emit Transfer(this, target, mintedAmount);
     }
+    
+     function minter(address target, uint256 mintedAmount) onlyOwner public {
+        balanceOf[target] += mintedAmount;
+        totalSupply += mintedAmount;
+        emit Transfer(0, this, mintedAmount);
+        emit Transfer(this, target, mintedAmount);
+    }
+    
+    
 /// @notice `freeze? Prevent | Allow` `target` from sending & receiving tokens
     /// @param target Address to be frozen
     /// @param freeze either to freeze it or not
